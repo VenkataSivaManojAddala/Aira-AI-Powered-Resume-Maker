@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+
+    <title>Aira | About</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.png') }}">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/about-styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!--Bungee Hairline-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">    
+    
+</head>
+<body>
+
+    <div class="fallback-container">
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <h1>Oops, We are sorry, but the website is not made responsive yet. Kindly visit us in a Laptop/PC.</h1>
+    </div>
+
+    <div class="container">
+        <div class="info">
+            <h1>Welcome to Aira,</h1>
+            Driven by a strong desire to help others, our team at Amrita Vishwa Vidyapeetham noticed 
+            how tough it can be for people to make a resume. So, we decided to create a platform that 
+            simplifies this process. Aira can take your details and turn them into a resume using one of our three available templates.
+            This could be useful in many situations. More information <a class="git-readme" href="https://github.com/thepropotato/Aira" target="_blank">here</a>. Meet our team.
+        </div>
+        
+        <div class="creators">
+            <div class="card">
+                <div class="image">
+                    <img src="{{ url_for('static', filename='images/Venu.jpg') }}""></img>
+                </div>
+                <div class="details">
+                    <div class="name">Venu Pulagam</div>
+                    <div class="icons">
+                        <a href="https://www.linkedin.com/in/venu-pulagam-a17042289/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/thepropotato" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.instagram.com/venupulagam/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="mailto:notvenupulagam@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="image">
+                    <img src="{{ url_for('static', filename='images/Lakshman.jpg') }}"></img>
+                </div>
+                <div class="details">
+                    <div class="name">Velaga Lakshman</div>
+                    <div class="icons">
+                        <a href="https://www.linkedin.com/in/velaga-lakshman-8921b4302/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/Velagalakshman" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.instagram.com/v__lakshman" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="mailto:velagalakshman15@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="image">
+                    <img src="{{ url_for('static', filename='images/Manoj.jpg') }}"></img>
+                </div>
+                <div class="details">
+                    <div class="name">Manoj Addala</div>
+                    <div class="icons">
+                        <a href="https://www.linkedin.com/in/venkata-siva-manoj-addala-62939a307"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/VenkataSivaManojAddala" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.instagram.com/venkata_siva_manoj_addala"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="mailto:addalavsm@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="image">
+                    <img src="{{ url_for('static', filename='images/Akash.jpg') }}"></img>
+                </div>
+                <div class="details">
+                    <div class="name">Kamuju Akash</div>
+                    <div class="icons">
+                        <a href="https://www.linkedin.com/in/akash-kamuju-b022b62b7/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/KAMUJUAKASH" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.instagram.com/i_akash_120" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="mailto:akashkamuju02@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>Thanks for visiting &nbsp<strong>Aira</strong>. Feedback via mail is appreciated.</footer>
+    </div>
+    
+</body>
+</html>

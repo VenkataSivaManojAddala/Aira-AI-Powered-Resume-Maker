@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Aira - AI Resume Assistant</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.png') }}">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/login-styles.css') }}">
+    <script src="{{url_for('static', filename='login-scripts.js')}}"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="loading"><div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></div>
+
+    <div class="fallback-container">
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <h1>Oops, We are sorry, but the website is not made responsive yet. Kindly visit us in a Laptop/PC.</h1>
+    </div>
+    
+    <div id="note">
+        <h1>Welcome to <span>Aira</span>.</h1>
+        <p>Your personal AI powered resume making assistant. Login or Signup to continue.</p>
+    </div>
+
+
+    <div id="login-container">
+        <div id="display-box">
+
+            <div id="login-signup">
+                <button id="select-login" onclick="toggleActive('select-login')">Login</button>
+                <button id="select-signup" onclick="toggleActive('select-signup')">Sign Up</button>
+            </div>
+
+            <div id="login-inputs">
+                <input placeholder="Username" id="login-username">
+                <input placeholder="Password" id="login-password" type="password">
+                <p id="login-log"></p>
+                <button class="submit" onclick="login()">Login</button>
+                <button class="forgot" onclick="ForgotPassword()">Forgot Password ?</button>
+            </div>
+
+            <div id="signup-inputs">
+                <input placeholder="Username" id="signup-username">
+                <input placeholder="Email" id="signup-email">
+                <div class="passwords">
+                    <input placeholder="Password" id="signup-password">
+                    <input placeholder="Confirm Password" id="signup-confirm-password">
+                </div>
+                <p id="signup-log"></p>
+                <button class="submit" onclick="signup()">Sign Up</button>
+            </div>
+
+            <div id="signup-confirm-inputs">
+                <p id="signup-confirm-note">A mail with the <span>Verification Code</span> has been sent.</p>
+                <input placeholder="Enter the verification code" id="vcode">
+                <p id="signup-confirm-log"></p>
+                <button class="submit" onclick="confirm_signup()" id="signup-confirm-submit">Confirm Signup</button>
+                <button class="forgot" onclick="resend()">Resend code ?</button>
+            </div>
+
+            <div id="continue-to-login">
+                <p id="signup-confirm-note">SignUp process succesfully completed.</p>
+                <button class="submit" onclick="backtologin()" id="signup-confirm-submit">Login to Continue</button>
+            </div>
+
+            <div id="forgot-password-email">
+                <input placeholder="Email">
+                <button class="submit" onclick="ForgotPasswordSubmitEmail()">Send the Verification Code</button>
+            </div>
+
+            <div id="forgot-password-code">
+                <input placeholder="Verification Code">
+                <button class="submit" onclick="ForgotPasswordSubmitCode()">Verify the Code</button>
+            </div>
+
+            <div id="forgot-password">
+                <input placeholder="New Password">
+                <input placeholder="Confirm New Password">
+                <button class="submit" onclick="showresetnote()">Change Password</button>
+            </div>
+
+            <div id="forgot-password-backtologin">
+                <p id="signup-confirm-note">Password has been changed succesfully. Please Login to continue.</p>
+                <button class="submit" onclick="backtologin()" id="signup-confirm-submit">Proceed to Login</button>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

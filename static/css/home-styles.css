@@ -1,0 +1,283 @@
+body{
+    background-color: #000000cc;
+    color: #E2DFD0;
+    height: 100vh;
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "poppins";
+    overflow: hidden;
+}
+
+#welcome-note{
+    height: calc(30% - 20px);
+    margin: 0px;
+}
+
+#container{
+    background-color: #000000cc;
+    height: calc(100% - 60px);
+    width: calc(100% - 60px);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+#templates{
+    margin: 0px;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.template-head{
+    color: #4F4A45;
+    margin: 0px 0px 20px 0px;
+    padding: 0px;
+}
+
+.tile{
+    width: 24%;
+}
+
+#no-image{
+    opacity: 0.5;
+    height: calc(80% - 28px);
+    border: dashed 4px white;
+    background-image: linear-gradient(to bottom, #000, #000000cc);
+}
+
+.image{
+    height: calc(80% - 20px);
+    font-size: x-large;
+    font-weight: 500;
+    color: #E2DFD0;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-image: linear-gradient(to bottom, #F97300, #000000cc);
+    transition: all 0.5s;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.image:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+#buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+.interactions{
+    background-color: #4F4A45;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-family: "poppins";
+    font-weight: bold;
+    border: none;
+    transition: all 0.5s;
+}
+
+.interactions a{
+    color: #000;
+}
+
+.interactions:hover{
+    cursor: pointer;
+    background-color: #F97300;
+    opacity: 0.7;
+}
+
+#menu {
+    background-color: #4f4a45;
+    position: absolute;
+    z-index: 1;
+    right: -30vw;
+    top: 10px;
+    height: calc(100% - 60px);
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    transition: right 0.5s;
+}
+
+.menu-button{
+    background-color: #000000cc;
+    border: none;
+    height: 50px;
+    color: #F97300;
+    font-family: "poppins";
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+
+.menu-button:hover{
+    background-color: #F97300;
+    color: #000000cc;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#open-menu, #close-menu{
+    background-color: transparent;
+    border: none;
+}
+
+#close-menu{
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+}
+
+svg{
+    background-color: #000000cc;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+svg:hover{
+    opacity: 0.7;
+}
+
+#header{
+    margin: 0px;
+    padding: 0px;
+    justify-content: space-between;
+    align-content: center;
+    display: flex;
+}
+
+#no-use{
+    opacity: 0.5;
+}
+
+#no-use:hover{
+    background-color: #4F4A45;
+    cursor: auto;
+}
+
+#no-image:hover, #no-tile:hover{
+    cursor:auto;
+}
+
+span{
+    color: #F97300;
+}
+
+a{
+    color: #E2DFD0;
+    text-decoration: none;
+    transition: all 0.15s;
+}
+
+
+
+#adduserdata{
+    background-color: #4F4A45;
+    color: #E2DFD0;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 15px;
+    font-family: "poppins";
+    font-weight: bold;
+    transition: all 0.15s;
+}
+
+#adduserdata:hover{
+    background-color: #F97300;
+    color: #000000cc;
+    cursor: pointer;
+}
+
+#adduserdata:hover a{
+    color: #000000cc;
+}
+
+#help{
+    background-color: #4f4a45;
+    color: #F97300;
+    font-family: "poppins";
+    font-size: 20px;
+    height: 45px;
+    width: 45px;
+    border: none;
+    border-radius: 50px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    transition: all 0.15s;
+}
+
+#buttons-row{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+#info{
+    font-size: small;
+    background-color: #4F4A45;
+    padding: 15px 20px;
+    margin: 0px;
+    border-radius: 15px;
+    display: none;
+}
+
+#help:hover + #info {
+    display: flex;
+}
+
+#help:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.fallback-container{
+    display: none;
+}
+
+@media (orientation: portrait) {
+
+    body{
+      background-color: #000000cc;
+    }
+
+    #container{
+      display: none;
+    }
+
+    .fallback-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 80vh;
+      width: 80vw;
+      padding: 10vh 10vw;
+      gap: 2vh;
+    }
+
+    .fallback-container i{
+      font-size: 240px;
+      color: #E2DFD0;
+    }
+
+    h1{
+      text-align: center;
+      font-family: "poppins";
+      color: #F97300;
+      font-weight: normal;
+    }
+}

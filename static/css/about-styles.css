@@ -1,0 +1,176 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: rgba(0, 0, 0, 0.945);
+    color: rgb(120, 120, 120);
+}
+
+.container{
+    width: 90vw;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5vw;
+}
+
+.info{
+    padding-top: 3%;
+    height: 20%;
+    width: 100%;
+    font-family: "poppins";
+}
+
+.creators{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card{
+    width: 20.8%;
+    height: 80%;
+    background-image: linear-gradient(to bottom, #F97300, #3e3e3ecc);
+    border-radius: 15px;
+    transition: all 0.2s;
+}
+
+.image {
+    width: 100%; 
+    height: 70%;
+    overflow: hidden;
+    position: relative;
+    filter: grayscale();
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.8) 100%);
+    pointer-events: none;
+}
+
+.image img {
+    width: 100%; 
+    height: 100%; 
+    display: block; 
+    object-fit: cover; /* Ensure the image covers the container */
+    transition: all 0.5s;
+}
+
+
+.card:hover{
+    scale: 1.05;
+    background-color: #F97300;
+}
+
+.card:hover .name{
+    color: black;
+}
+
+.card:hover > .image {
+    filter: none;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.name{
+    font-family: "bungee hairline";
+    color: #E2DFD0;
+    font-weight: bold;
+    margin: 5% 0%;
+    transition: all 0.15s;
+}
+
+.details i{
+    color: #0B1215;
+    cursor: pointer;
+    font-size: x-large;
+}
+
+.icons{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    transition: all 0.2s;
+}
+
+.icons i{
+    transition: all 0.2s;
+}
+
+.icons i:hover{
+    color: #F97300;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: "bungee hairline";
+    color: white;
+}
+
+h1{
+    color: #F97300;
+}
+
+.git-readme{
+    text-decoration: none;
+    color: #F97300;
+}
+
+.git-readme a:visited{
+    color: white;
+}
+
+.fallback-container{
+    display: none;
+}
+
+@media (orientation: portrait) {
+
+    body{
+      background-color: #000000cc;
+    }
+
+    .container{
+      display: none;
+    }
+
+    .fallback-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 80vh;
+      width: 80vw;
+      padding: 10vh 10vw;
+      gap: 2vh;
+    }
+
+    .fallback-container i{
+      font-size: 240px;
+      color: #E2DFD0;
+    }
+
+    h1{
+      text-align: center;
+      font-family: "poppins";
+      color: #F97300;
+      font-weight: normal;
+    }
+}
