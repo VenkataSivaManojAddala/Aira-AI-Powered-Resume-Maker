@@ -157,7 +157,7 @@ Simple, we all like to have a friend who can help us with the toughest works. On
 
 # Queries and Feedback
 
-For any Queries and feedback please mail me at notvenupulagam@gmail.com
+For any Queries and feedback please mail me at addalavenmanoj@gmail.com
 
 Hope you liked my work. Have a good day. Thanks for visiting Aira.
 
